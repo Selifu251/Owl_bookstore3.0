@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>React Test 001</title>
+        <meta charset="utf8" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/OwlBookstore_Main.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+      <!--Top-->
+      <div class="top_header">
+        <p>React Test 001</p>
+      </div>
+      <!-- // Top -->
+      <!-- Title -->
+      <div>
+        <h1>REACT 學習紀錄</h1>
+        <hr /><hr />
+      </div>
+      <!-- // Title -->
+      <!-- Main -->
+      <div>
+        <div id='root1'></div><hr />
+        <div id='root2'></div><hr />
+        <div id="root3"></div><hr />
+        <div id="root4"></div><hr />
+        <div id="root5"></div><hr />
+      </div>
+      <!-- // Main -->
+      <!-- Floor -->
+      <div class="floor_header">
+        <p>React Test 001</p>
+      </div> 
+      <!-- // Floor-->
+    </body>
+
+    <!-- React -->
+    <script src="js/react.development.js"></script>
+    <script src="js/react-dom.development.js"></script>
+    <script src="js/babel.min.js"></script>
+    <!--// React -->
+    <!-- Root1 -->
+    <script type="text/babel">
+      const user = {
+        firstName:'Harry',
+        lastName:'Pottor',
+        sex: '男孩'}
+
+      const ele = (
+        <div>
+          <h1>Hello World,{user.firstName} {user.lastName}</h1>
+          <p>逆好，{user.sex}</p>
+        </div>
+      );
+      ReactDOM.render(
+        ele,
+        document.getElementById('root1')
+      );
+    </script>
+    <!--// Root1 -->
+    <!-- Root2 -->
+    <script type="text/babel">
+      function tick(){
+        const element = (
+          <div>
+            <h2>Now date {new Date().toLocaleTimeString()}.</h2>
+          </div>
+        );
+        ReactDOM.render(
+          element,
+          document.getElementById('root2')
+        );
+      }
+      setInterval(tick,1000);
+    </script>
+    <!-- // Root2 -->
+    <!-- Root3 -->
+    <script type="text/babel">
+      function Welcome(props){
+        return (
+          <div>
+            <h2>Component 與 Prop</h2>
+            <p>{props.name}</p>
+          </div>
+        );
+      }
+      const com = (
+        <div>
+          <Welcome name="Sam" />
+          <Welcome name="Petter" />
+          <Welcome name="Jim" />
+        </div>
+      );
+      ReactDOM.render(
+        com,
+        document.getElementById('root3')
+      );
+    </script>
+    <!-- // Root3 -->
+    <!-- Root4 -->
+    <script type="text/babel">
+
+      class Clock extends React.Component{
+        constructor(props){
+          super(props);
+          this.state = {date: new Date()};
+        }
+
+        componentDidMount(){
+          this.timerID = setInterval(
+            ()=>this.tick(),
+            1000
+          );
+        }
+
+        componentWillUnmount(){
+          clearInterval(this.timerID);
+        }
+
+        tick(){
+          this.setState({
+            date: new Date()
+          });
+        }
+
+        render(){
+          return (
+            <div>
+              <h1>State 與 生命週期</h1>
+              <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(
+        <Clock />,
+        document.getElementById('root4')
+      );
+    </script>
+    <!--// Root4 -->
+    <!-- Root5 -->
+    <script type="text/babel">
+      class Test005 extends React.Component{
+
+        render(){
+          return(
+            <div>
+              <h2>State 的更新會被 Merge(合併)</h2>
+              <h3></h3>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(
+        <Test005 />,
+        document.getElementById('root5')
+      );
+    </script>
+    <!--// Root5 -->
+</html>
