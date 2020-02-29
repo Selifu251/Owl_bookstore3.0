@@ -91,6 +91,7 @@
                             <li class="nav-item"><a class="nav-link" href="react_test001.html">ReactTest</a></li>
                             <li class="nav-item"><a class="nav-link" href="product.php">Product</a></li>
                             <li class="nav-item"><a class="nav-link" href="?do=mem_shopcart">購物車</a></li>
+                            <li class="nav-item"><a class="nav-link" href="myresume.html"">自製履歷/作品</a></li>
                         </ul>
                     </div>
                 </div>
@@ -98,10 +99,10 @@
         </div>
         <!-- nav -->
         <!-- Main -->
+        <?php if(!isset($_GET['do'])){ require_once("main_index.html"); } ?>
         <?php if(isset($_GET['do']) && $_GET['do']=='product'){ require_once("product.php"); } ?>
         <?php if(isset($_GET['do']) && $_GET['do']=='product_book'){ require_once("product_book.php"); } ?>
         <?php if(isset($_GET['do']) && $_GET['do']=='mem_shopcart'){ require_once("member_shopcart.php"); } ?>
-        <?php if(!isset($_GET['do'])){ require_once("ch_book_index.html"); } ?>
         <!-- // Main -->
         <!-- floor_header -->
         <div class="floor_header container-filed">
