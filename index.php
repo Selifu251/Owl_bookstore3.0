@@ -9,6 +9,9 @@
 
 
     <style>
+body {
+    font-family: Microsoft JhengHei;
+}
 .pro_inface {
     background-color: white;
     border: 1px gray solid;
@@ -92,6 +95,7 @@
                             <li class="nav-item"><a class="nav-link" href="product.php">Product</a></li>
                             <li class="nav-item"><a class="nav-link" href="?do=mem_shopcart">購物車</a></li>
                             <li class="nav-item"><a class="nav-link" href="myresume.html"">自製履歷/作品</a></li>
+                            <li class="nav-item"><a class="nav-link" href="main_newbookimg.php"">NweBookImgPhp</a></li>
                         </ul>
                     </div>
                 </div>

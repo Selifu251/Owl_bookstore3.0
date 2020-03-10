@@ -1,0 +1,28 @@
+<div>
+    <h1>MAIN NewBookImg Js</h1>
+</div>
+
+<script src="js/jquery-3.2.1.slim.min.js"></script>
+<script>
+    var getUrlString = location.href;
+    var url = new URL(getUrlString);
+    var get_newbookimg =  url.searchParams.get('newbookimg');
+
+    console.log(get_newbookimg);
+
+    var newbookimg = JSON.parse(get_newbookimg);
+    console.log(newbookimg);
+    console.log(newbookimg.length);
+
+    for (i=0;i<newbookimg.length;i++){
+        console.log(newbookimg[i]["ont_title"]);
+    }
+
+
+</script>
+<script>
+    $.ajax{
+        type:"GET",
+        url:'main_newbookimg.php'
+    };
+</script>
