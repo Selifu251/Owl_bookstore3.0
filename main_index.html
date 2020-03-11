@@ -6,6 +6,12 @@
     .newbook_title {
       font-size: 80px;
     }
+    .newbook_content {
+      font-size: 30px;
+    }
+    .hotbook_div {
+      border: 1px black solid;
+    }
 </style>
 
 <!-- nwebook -->
@@ -22,6 +28,17 @@
   </a>
 </div>
 <!--// newbook -->
+<!-- hotbook -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>熱門書籍</h1>
+      <div id="hotbook" class="hotbook_div container-fluid">
+      </div>
+    </div>
+  </div>
+</div>
+<!--// hotbook -->
 
 <!-- React -->
 <script src="js/react.development.js"></script>
@@ -32,3 +49,8 @@
 <!-- newbook 圖片輪轉 -->
 <script src="model/main_carouselAll.js" type="text/babel"></script>
 <!--// newbook 圖片輪轉 -->
+
+<!-- 書籍商品模板 -->
+<script src="model/main_hotbookAll.js" type="text/babel">
+</script>
+<!--// 書籍商品模板 -->

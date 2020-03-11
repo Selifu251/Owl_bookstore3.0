@@ -1,7 +1,7 @@
 
 
     let arrLists_a = ['images/newbook_img/banner4-2.jpg',
-                    "綠野先蹤",
+                    "綠野先蹤2",
                     "自從艾薇·羅伯茲的女兒在父親那得到了一個玩偶後，感覺就全變個樣了<br />因此特地請來了名人來解決此事，怎料這事情才正要開始……"
                     ];
     let arrLists_b = ['images/newbook_img/banner1-2.jpg',
@@ -19,12 +19,12 @@
 
   function CarouselItemActive(props){
     return(
-      <div class="carousel-item active">
-        <img class="d-block w-100" src={props.newbookimg} alt="First slide" />
-        <div class="carousel-caption d-none d-md-block">
-          <div class="newbook_div">
-            <h5 class="newbook_title">{props.title}</h5>
-            <p>{props.content}</p>
+      <div className="carousel-item active">
+        <img className="d-block w-100" src={props.newbookimg} alt="First slide" />
+        <div className="carousel-caption d-none d-md-block">
+          <div className="newbook_div">
+            <h5 className="newbook_title">{props.title}</h5>
+            <p className="newbook_content">{props.content}</p>
           </div>
         </div>
       </div>
@@ -33,12 +33,12 @@
 
   function CarouselItem(props){
     return(
-      <div class="carousel-item">
-        <img class="d-block w-100" src={props.newbookimg} alt={props.noimg} />
-        <div class="carousel-caption d-none d-md-block">
-          <div class="newbook_div">
-            <h5 class="newbook_title">{props.title}</h5>
-            <p>{props.content}</p>
+      <div className="carousel-item">
+        <img className="d-block w-100" src={props.newbookimg} alt={props.noimg} />
+        <div className="carousel-caption d-none d-md-block">
+          <div className="newbook_div">
+            <h5 className="newbook_title">{props.title}</h5>
+            <p className="newbook_content">{props.content}</p>
           </div>
         </div>
       </div>
