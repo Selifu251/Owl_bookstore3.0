@@ -37,6 +37,11 @@ body {
 #carlist_tab {
     border: 1px solid black;
 }
+.end_div {
+    height: 300px;
+    background-color:azure;
+    margin-top: 10px;
+}
     </style>
 
     <body>
@@ -108,6 +113,31 @@ body {
         <?php if(isset($_GET['do']) && $_GET['do']=='product_book'){ require_once("product_book.php"); } ?>
         <?php if(isset($_GET['do']) && $_GET['do']=='mem_shopcart'){ require_once("member_shopcart.php"); } ?>
         <!-- // Main -->
+        <!-- end_div -->
+        <div class="end_div" style="padding-top: 20px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3>相關連結</h3>
+                        <ul>
+                            <li>關於我們</li>
+                            <li><a href="myresume.html">其餘作品</a></li>
+                            <li><a href="https://github.com/Selifu251/Owl_bookstore3.5">GitHub</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>聯繫方式</h3>
+                        <ul>
+                            <li>台南市 台灣</li>
+                            <li>0962055037</li>
+                            <li>affu1412@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!--// end_div -->
         <!-- floor_header -->
         <div class="floor_header container-filed">
             <p>歡迎光臨貓頭鷹書房</p>
