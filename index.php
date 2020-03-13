@@ -42,6 +42,11 @@ body {
     background-color:azure;
     margin-top: 10px;
 }
+.up_top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
     </style>
 
     <body>
@@ -134,15 +139,35 @@ body {
                         </ul>
                     </div>
                 </div>
-                
             </div>
         </div>
         <!--// end_div -->
+        <!-- 回到頂點 -->
+        <div class="up_top">
+            <a href="javascript:;" id="uptop"><img src="images/up_top.png" /></a>
+        </div>
+        <!-- // 回到頂點 -->
         <!-- floor_header -->
         <div class="floor_header container-filed">
             <p>歡迎光臨貓頭鷹書房</p>
         </div>
         <!-- // floor_header -->
+        <div>
+            <p>aaaa</p>
+            <p>aaaa</p>
+            <p>aaaa</p>
+            <p>aaaa</p>
+            <p>aaaa</p>
+            <p>aaaa</p>
+            <p>aaaa</p>
+            <p>aaaa</p>
+            <p>aaaa</p>
+            <p>aaaa</p>
+            <p>aaaa</p>
+            <p>aaaa</p>
+            <p>aaaa</p>
+            <p>aaaa</p>
+        </div>
     </body>
 
     <!-- Bootstarp4.0 -->
@@ -151,4 +176,16 @@ body {
     <script src="js/bootstrap.min.js"></script>
     <!-- // Bootstarp4.0 -->
     <script src="js/jquery.cookie.js"></script>
+
+    <script>
+        window.onload = function(){
+            console.log('[001]');
+            var uptop =  document.getElementById('uptop');
+            uptop.onclick = function(){
+                console.log("[002]");
+                var osTop = document.documentElement.scrollTop;
+                console.log(osTop);
+            }
+        }
+    </script>
 </html>

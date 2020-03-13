@@ -68,7 +68,7 @@
       for(let i=0;i<=ob_list.length-1;i++){
         oblist.push(
           <div className="col-md-4">
-            <HotbookInface
+            <HotbookInface key = {ob_list[i]} 
               img={ob_list[i][0]}
               name={ob_list[i][1]}
               author={ob_list[i][2]}
@@ -93,7 +93,7 @@
       for(let i=0;i<=tr_list.length-1;i++){
         trlist.push(
           <div className="col-md-4">
-            <HotbookInface
+            <HotbookInface key={tr_list[i]}
               img={tr_list[i][0]}
               name={tr_list[i][1]}
               author={tr_list[i][2]}

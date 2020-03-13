@@ -141,20 +141,20 @@
     <!--// Root4 -->
     <!-- Root5 -->
     <script type="text/babel">
-      class Test005 extends React.Component{
-
-        render(){
-          return(
-            <div>
-              <h2>State 的更新會被 Merge(合併)</h2>
-              <h3></h3>
-            </div>
-          );
-        }
+      function NumberList(props){
+        const numbers = props.numbers;
+        const listItems = numbers.map((number)=>
+          <li key={number.toString()}>{number}</li>
+        );
+        return (
+          <ul>{listItems}</ul>
+        );
       }
 
+      const numbers=[1,2,3,4,5];
+
       ReactDOM.render(
-        <Test005 />,
+        <NumberList numbers={numbers} />,
         document.getElementById('root5')
       );
     </script>

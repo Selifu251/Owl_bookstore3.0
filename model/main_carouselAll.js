@@ -53,9 +53,15 @@
 
       for(let i=0;i<=arrLists.length-1;i++){
         if(i==0){
-          lists.push(<CarouselItemActive newbookimg={arrLists[i][0]} title={arrLists[i][1]} content={arrLists[i][2]} />);
+          lists.push(<CarouselItemActive key={arrLists[i]}
+            newbookimg={arrLists[i][0]} 
+            title={arrLists[i][1]} 
+            content={arrLists[i][2]} />);
         }else{
-          lists.push(<CarouselItem newbookimg={arrLists[i][0]} noimg="newIMG" title={arrLists[i][1]} content={arrLists[i][2]} />);
+          lists.push(<CarouselItem key={arrLists[i].toString()}
+            newbookimg={arrLists[i][0]} 
+            noimg="newIMG" title={arrLists[i][1]} 
+            content={arrLists[i][2]} />);
         }
       }
       return (
