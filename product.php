@@ -1,7 +1,18 @@
 <?php
     require_once('Connections/owl_bookstore.php');
-
-    $sql = "select*from owl_book order by ob_publication_day desc";
+?>
+<?php
+    if(isset($_GET['search']) && $_GET['search']!=""){
+        $search = $_GET['search'];
+        $sql_where = "where ob_name like '%".$search."%' or ob_author like '%".$search."%'";
+    }else{
+        $sql_where = "";
+    }
+    $sql_bk = "select*from owl_book";
+    $sql_order = "order by ob_publication_day desc";
+    $sql = $sql_bk." ".$sql_where." ".$sql_order;
+?>
+<?php
     $result_product = $link->query($sql);
     echo "共有".$result_product->rowCount()."筆記錄<hr />";
 ?>

@@ -1,9 +1,3 @@
-<?php
-    if(isset($_POST['search_book'])){
-        header("Location:?do=product&search=".$_POST['search_book']);
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="zh-TW">
     <head>
@@ -11,8 +5,49 @@
         <meta charset="utf8">
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/OwlBookstore_Main.css" rel="stylesheet" type="text/css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
+
+
+    <style>
+body {
+    font-family: Microsoft JhengHei;
+}
+.pro_inface {
+    background-color: white;
+    border: 1px gray solid;
+    border-radius:5px;
+    height: 380px;
+    margin-top: 10px;
+    padding: 2px;
+}
+.pro_inface_obname {
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.pro_inface_obauthor {
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
+#carlist_tab {
+    border: 1px solid black;
+}
+.end_div {
+    height: 300px;
+    background-color:azure;
+    margin-top: 10px;
+}
+.up_top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+    </style>
 
     <body>
         <!-- top_header -->
@@ -25,9 +60,7 @@
            <div class="row">
                <div class="col-12 col-md-4">
                     <h1 class="logo_h1">貓頭鷹書房</h1>
-                    <a href="?">
-                        <img src="images/logo.png">
-                    </a>
+                    <img src="images/logo.png">
                 </div>
                <div class="col-12 col-md-8"">
                     <!-- header-list -->
@@ -39,14 +72,10 @@
                     <!-- // header-list -->
                     <!-- search -->
                     <div class="container-field">
-                        <form id="search_form" method="POST" action="#">
-                            <div class="row">
-                                <input name="search_book" type="search" class="form-control search_book col-10">
-                                <button type="submit" class="btn col-2">
-                                    <img class="search_img" src="images/search1.png">
-                                </button>
-                            </div>
-                        </form>
+                        <div class="row">
+                            <input type="search" class="form-control search_book col-11">
+                            <a href="?do=product" class="btn col-1"><img class="search_img" src="images/search1.png"></a>
+                        </div>
                     </div>
                     <!-- // search -->
                 </div>
@@ -79,7 +108,7 @@
                             <li class="nav-item"><a class="nav-link" href="?do=mem_shopcart">購物車</a></li>
                             <li class="nav-item"><a class="nav-link" href="myresume.html"">自製履歷/作品</a></li>
                             <li class="nav-item"><a class="nav-link" href="main_newbookimg.php"">NweBookImgPhp</a></li>
-                            <li class="nav-item"><a class="nav-link" href="RwdTest.html"">RWDTEST</a></li>
+                            <li class="nav-item"><a class="nav-link" href="RwdTest.php"">RWDTEST</a></li>
                         </ul>
                     </div>
                 </div>
@@ -87,10 +116,10 @@
         </div>
         <!-- nav -->
         <!-- Main -->
-            <?php if(!isset($_GET['do'])){ require_once("main_index.html"); } ?>
-            <?php if(isset($_GET['do']) && $_GET['do']=='product'){ require_once("product.php"); } ?>
-            <?php if(isset($_GET['do']) && $_GET['do']=='product_book'){ require_once("product_book.php"); } ?>
-            <?php if(isset($_GET['do']) && $_GET['do']=='mem_shopcart'){ require_once("member_shopcart.php"); } ?>
+        <?php if(!isset($_GET['do'])){ require_once("main_index.html"); } ?>
+        <?php if(isset($_GET['do']) && $_GET['do']=='product'){ require_once("product.php"); } ?>
+        <?php if(isset($_GET['do']) && $_GET['do']=='product_book'){ require_once("product_book.php"); } ?>
+        <?php if(isset($_GET['do']) && $_GET['do']=='mem_shopcart'){ require_once("member_shopcart.php"); } ?>
         <!-- // Main -->
         <!-- end_div -->
         <div class="end_div" style="padding-top: 20px;">
@@ -134,4 +163,16 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- // Bootstarp4.0 -->
     <script src="js/jquery.cookie.js"></script>
+
+    <script>
+        window.onload = function(){
+            console.log('[001]');
+            var uptop =  document.getElementById('uptop');
+            uptop.onclick = function(){
+                console.log("[002]");
+                var osTop = document.documentElement.scrollTop;
+                console.log(osTop);
+            }
+        }
+    </script>
 </html>

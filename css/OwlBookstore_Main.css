@@ -40,8 +40,44 @@
 /*// Search */
 /* Product */
 .pro_inface {
-    background-color: aquamarine;
+    background-color: white;
     border: 1px gray solid;
     border-radius:5px;
+    height: 380px;
+    margin-top: 10px;
+    padding: 2px;
+}
+.pro_inface_obname {
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.pro_inface_obauthor {
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
 }
 /*// Product */
+/* 字體 */
+body {
+    font-family: Microsoft JhengHei;
+}
+/*// 字體 */
+
+#carlist_tab {
+    border: 1px solid black;
+}
+.end_div {
+    height: 300px;
+    background-color:azure;
+    margin-top: 10px;
+}
+.up_top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
