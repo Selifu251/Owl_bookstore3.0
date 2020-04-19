@@ -75,11 +75,9 @@
                             <li class="nav-item"><a class="nav-link" href="#">關於我們</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">會員專區</a></li>
                             <li class="nav-item"><a class="nav-link" href="react_test001.html">ReactTest</a></li>
-                            <li class="nav-item"><a class="nav-link" href="product.php">Product</a></li>
+                            <li class="nav-item"><a class="nav-link" href="vue_test001.html">VueTest</a></li>
                             <li class="nav-item"><a class="nav-link" href="?do=mem_shopcart">購物車</a></li>
                             <li class="nav-item"><a class="nav-link" href="myresume.html"">自製履歷/作品</a></li>
-                            <li class="nav-item"><a class="nav-link" href="main_newbookimg.php"">NweBookImgPhp</a></li>
-                            <li class="nav-item"><a class="nav-link" href="RwdTest.html"">RWDTEST</a></li>
                         </ul>
                     </div>
                 </div>
